@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: params.BRANCH, url: 'https://github.com/Daredevil9999/rest-calculator.git'
+                git branch: "${params.BRANCH}", url: 'https://github.com/Daredevil9999/rest-calculator.git'
             }
         }
         stage('Build') {
