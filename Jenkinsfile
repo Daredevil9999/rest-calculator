@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools{
+       maven "jenkins-maven"
+    }
+
     environment {
         CURRENT_BRANCH = "${env.BRANCH_NAME}"
     }
