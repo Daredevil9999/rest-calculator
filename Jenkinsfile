@@ -6,7 +6,7 @@ pipeline {
     }
 
     parameters {
-        gitParameter (defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH', branchFilter: '.*', description: 'Select branch to build')
+        gitParameter (defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH', branchFilter: 'origin/(.*)', description: 'Select branch to build')
     }
     stages {
         stage('Checkout') {
