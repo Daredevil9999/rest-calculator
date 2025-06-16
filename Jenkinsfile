@@ -6,7 +6,7 @@ pipeline {
     }
 
     parameters {
-        gitParameter (defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH', branchFilter: '.*', description: 'Select branch to build')
+        gitParameter (defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH', description: 'Select branch to build')
     }
     stages {
         stage('Checkout') {
@@ -16,6 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                echo "this is new change"
                 sh 'mvn clean install'
             }
         }
